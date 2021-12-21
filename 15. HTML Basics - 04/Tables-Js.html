@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title> </title>
+	<meta charset="UTF-8">
+	<script>
+		function Student(name, age, city, phone) {
+			this.name = name;
+			this.age = age;
+			this.city = city;
+			this.phone = phone;
+		}
+		
+		var student_01 = new Student("Layla", "2223423", "Riyadh", "394u903");
+		var student_02 = new Student("Saleh", "342432", "Dammad", "3423432432");
+		var student_03 = new Student("Saleh", "342432", "Dammad", "3423432432");
+		var student_04 = new Student("Saleh", "342432", "Dammad", "3423432432");
+		var student_05 = new Student("Saleh", "342432", "Dammad", "3423432432");
+		
+		var students = new Array();
+		students[0] = student_01;
+		students[1] = student_02;
+		students[2] = student_03;
+		students[3] = student_04;
+		students[4] = student_05;
+		
+		function printNames(){
+			for(var i = 0; i < students.length ; i++){
+				document.write("<tr>"+
+				+"<td>" + students[i].name + "</td>"
+				+ "<td>" + students[i].age + "</td>"
+				+"<td> <a href='https://yu.edu.sa'>" + students[i].city + "</a></td>"
+				+"<td>" + students[i].phone + "</td>"
+				+"</tr>");
+			}
+			
+		}
+	</script>
+</head>
+<body>
+	<table>
+		<caption> Students Information </caption>
+		<tr>
+			<th> Name </th>
+			<th> Age </th>
+			<th> City </th>
+			<th> Phone </th>
+		</tr>
+		<script> printNames(); </script>
+	</table>
+</body>
+</html>
